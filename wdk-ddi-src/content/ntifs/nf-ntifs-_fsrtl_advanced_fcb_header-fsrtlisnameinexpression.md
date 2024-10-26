@@ -84,9 +84,9 @@ The following wildcard characters can be used in the pattern string.
 | ------------------ | ------- |
 | * (asterisk) | Matches zero or more characters. |
 | ? (question mark) | Matches a single character. |
-| DOS_DOT | Matches either a period or zero characters beyond the name string. |
-| DOS_QM | Matches any single character or, upon encountering a period or end of name string, advances the expression to the end of the set of contiguous DOS_QMs. |
-| DOS_STAR | Matches zero or more characters until encountering and matching the final . in the name. |
+| < (less than) or `DOS_DOT` | Matches either a period or zero characters beyond the name string. |
+| > (greater than) or `DOS_QM` | Matches any single character or, upon encountering a period or end of name string, advances the expression to the end of the set of contiguous DOS_QMs. |
+| " (double quotation mark) or `DOS_STAR` | Matches zero or more characters until encountering and matching the final . in the name. |
 
 In low resource conditions, **FsRtlIsNameInExpression** can raise a structured exception with a code of STATUS_NO_MEMORY, which callers should be prepared to handle. For more information, see [Structured Exception Handling](/windows/win32/debug/structured-exception-handling).
 
